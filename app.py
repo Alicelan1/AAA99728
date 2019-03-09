@@ -5,6 +5,8 @@ from linebot import (LineBotApi, WebhookHandler)
 from linebot.exceptions import (InvalidSignatureError)
 from linebot.models import *
 
+from engine.coin import now_currency
+
 app = Flask(__name__)
 
 # 設定你的Channel Access Token
@@ -40,6 +42,8 @@ def handle_message(event):
 	word = event.message.text
 	if word == '你好':
 		reply = 'Hello'
+	elif word == '美金' or word == '日币'
+	reply = now_currency(word)
 	else:
 		reply = '听不懂'
 	message = TextSendMessage(text=reply)
