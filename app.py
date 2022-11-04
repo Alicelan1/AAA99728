@@ -9,10 +9,10 @@ from engine.coin import now_currency
 from engine.owm import OWM_lat_lon
 app = Flask(__name__)
 
-# 設定你的Channel Access Token
+# 設定Channel Access Token
 line_bot_api = LineBotApi(
 	'/Q0fbKP1Y9I8I6y4lgThebyVsNyhrWgIHwqvNgNOvrSfJmK1NVRwln1qwrAKGmeY2yyjygVMBZphv6Krh3oa0aKymI6rw7+Qp7Pt0j8heepndeiESJKcUg0nO9E5oLRpTcJwX2rpUK+0JLWXKJ5ArAdB04t89/1O/w1cDnyilFU=')
-# 設定你的Channel Secret
+# 設定Channel Secret
 handler = WebhookHandler('810f98cde5f91914673efe321ca1e261')
 
 # 監聽所有來自 /callback 的 Post Request
